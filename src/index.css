@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Minecraft', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  background-image: url('/images/minecraft-bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+/* Estilos específicos para Minecraft */
+.minecraft-btn {
+  @apply bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 border-b-4 border-green-800 hover:border-green-900 rounded transition duration-300;
+  image-rendering: pixelated;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.minecraft-btn:active {
+  @apply transform translate-y-1 border-b-2;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.minecraft-panel {
+  @apply bg-gray-800 rounded-lg overflow-hidden shadow-lg border-2 border-gray-700;
+  image-rendering: pixelated;
+}
+
+.pixel-border {
+  box-shadow: 
+    0 0 0 2px #000,
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  image-rendering: pixelated;
+}
+
+/* Animaciones */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Estilos para textos pixelados */
+.pixel-text {
+  text-shadow: 2px 2px 0 #000;
+  letter-spacing: 1px;
+}
+
+.grass-texture {
+  background-image: url('/images/grass-texture.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+}
+
+.dirt-texture {
+  background-image: url('/images/dirt-texture.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+}
